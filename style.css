@@ -8,10 +8,11 @@
 
 body {
   margin: 0;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   background-color: var(--dark-bg);
   color: var(--text-light);
   scroll-behavior: smooth;
+  font-size: 20px;
 }
 
 .hero {
@@ -53,6 +54,8 @@ body {
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
+  margin-top: 1rem;
+  display: inline-block;
 }
 
 .cta-button:hover {
@@ -64,6 +67,7 @@ body {
 .secondary {
   background-color: transparent;
   border: 1px solid var(--accent);
+  margin-top: 0.5rem;
 }
 
 .benefits {
@@ -206,6 +210,52 @@ button {
   margin-top: 10px;
   font-style: italic;
 }
+
+.how-it-works {
+  padding: 60px 20px;
+  background-color: #0f0f0f;
+  color: var(--text-light);
+  text-align: center;
+}
+
+.how-text {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.faq {
+  padding: 60px 20px;
+  background-color: #111;
+  color: var(--text-light);
+  max-width: 800px;
+  margin: 80px auto;
+}
+
+.faq h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.faq details {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.faq summary {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.faq p {
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
 
 .footer {
   padding: 30px;
