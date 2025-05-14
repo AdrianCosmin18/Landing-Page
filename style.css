@@ -47,15 +47,11 @@ body {
 }
 
 .logo img {
-  height: 60px;
+  height: 70px;
   filter: drop-shadow(0 0 10px var(--accent));
   transition: transform 0.3s ease;
+  transform: scale(1.15);
 }
-
-.logo img:hover {
-  transform: scale(1.05);
-}
-
 
 .nav-links a {
   color: var(--text-light);
