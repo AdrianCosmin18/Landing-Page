@@ -1,0 +1,352 @@
+:root {
+    --primary-bg: #0F6AC0;
+    --primary-gradient-start: #0F6AC0;
+    --primary-gradient-end: #18B5B5;
+
+    --navbar-bg: #0E3C5D;
+    --footer-bg: #0C3756;
+    --login-bg-start: #18B5B5;
+    --login-bg-end: #0E3C5D;
+
+    --button-bg: #0D9AFF;
+    --cart-item-bg: #8DB6CF;
+
+    --text-light: #f2f2f2;
+    --text-dark: #0a0a0a;
+
+}
+
+body {
+    margin: 0;
+    font-family: 'Exo 2', sans-serif;
+    background: linear-gradient(to bottom, var(--primary-gradient-start), var(--primary-gradient-end));
+    color: var(--text-light);
+    scroll-behavior: smooth;
+    font-size: 20px;
+    padding-top: 80px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--navbar-bg);
+    box-shadow: 0 0 10px var(--button-bg);
+    padding: 1rem 2rem;
+    z-index: 999;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 0.2rem;
+}
+
+.logo img {
+    height: 60px;
+    filter: drop-shadow(0 0 10px var(--button-bg));
+    transition: transform 0.3s ease;
+    transform: scale(1.15);
+}
+
+.nav-links a {
+    color: var(--text-light);
+    margin-left: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--button-bg);
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(to right, var(--primary-gradient-end), var(--primary-gradient-start));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.glow {
+    color: var(--button-bg);
+    text-shadow: 0 0 10px var(--button-bg), 0 0 20px var(--button-bg);
+    font-size: 3rem;
+}
+
+.cta-button {
+    background-color: var(--button-bg);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: white;
+    color: var(--button-bg);
+    box-shadow: 0 0 10px var(--button-bg);
+}
+
+.secondary {
+    background-color: transparent;
+    border: 1px solid var(--button-bg);
+    margin-top: 0.5rem;
+}
+
+.benefits {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    background: var(--cart-item-bg);
+}
+
+.benefit {
+    text-align: center;
+    max-width: 150px;
+}
+
+.benefit img {
+    width: 50px;
+    filter: drop-shadow(0 0 5px var(--button-bg));
+}
+
+.stats {
+    text-align: center;
+    padding: 30px;
+    font-size: 1.5rem;
+    background-color: #080808;
+}
+
+.counter {
+    font-size: 2rem;
+    color: var(--button-bg);
+}
+
+.popular-games {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.game-card {
+    background-color: var(--cart-item-bg);
+    border: 1px solid #2a4d75;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    transition: transform 0.3s ease;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--button-bg);
+}
+
+.game-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.game-card h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.game-card p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.icon {
+    font-style: normal;
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.game-card button {
+    background-color: var(--button-bg);
+    border: none;
+    padding: 0.5rem 1rem;
+    color: #000;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.game-card button:hover {
+    background-color: white;
+    color: var(--button-bg);
+}
+
+.games-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+button {
+    background-color: var(--button-bg);
+    border: none;
+    padding: 0.5rem 1rem;
+    color: #000;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.testimonials {
+    background-color: #0f0f0f;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.testimonial {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.how-it-works {
+    padding: 60px 20px;
+    background-color: var(--primary-bg);
+    color: var(--text-light);
+    text-align: center;
+}
+
+.how-text {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+.faq {
+    padding: 60px 20px;
+    background-color: var(--cart-item-bg);
+    color: var(--text-dark);
+    max-width: 800px;
+    margin: 80px auto;
+}
+
+.faq h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.faq details {
+    background-color: #e0ecf4;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.faq summary {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.faq p {
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.newsletter {
+    background: linear-gradient(to right, var(--primary-gradient-start), var(--primary-gradient-end));
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.newsletter h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.newsletter-form input {
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 8px;
+    min-width: 250px;
+    font-size: 1rem;
+}
+
+.newsletter-form button {
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: white;
+    color: var(--button-bg);
+    box-shadow: 0 0 10px var(--button-bg);
+}
+
+.footer {
+    padding: 30px;
+    background-color: var(--footer-bg);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
