@@ -1,18 +1,28 @@
 :root {
-  --neon-blue: #00ffff;
-  --neon-purple: #8a2be2;
-  --dark-bg: #0a0a0a;
-  --text-light: #e0e0e0;
-  --accent: #00ffcc;
+  --primary-bg: #0F6AC0;
+  --primary-gradient-start: #0F6AC0;
+  --primary-gradient-end: #18B5B5;
+
+  --navbar-bg: #0E3C5D;
+  --footer-bg: #0C3756;
+  --login-bg-start: #18B5B5;
+  --login-bg-end: #0E3C5D;
+
+  --button-bg: #0D9AFF;
+  --cart-item-bg: #8DB6CF;
+
+  --text-light: #f2f2f2;
+  --text-dark: #0a0a0a;
 }
 
 body {
   margin: 0;
   font-family: 'Exo 2', sans-serif;
-  background-color: var(--dark-bg);
+  background: linear-gradient(to bottom, var(--primary-gradient-start), var(--primary-gradient-end));
   color: var(--text-light);
   scroll-behavior: smooth;
   font-size: 20px;
+  padding-top: 80px;
 }
 
 .navbar {
@@ -20,8 +30,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #0a0a0a;
-  box-shadow: 0 0 10px var(--accent);
+  background-color: var(--navbar-bg);
+  box-shadow: 0 0 10px var(--button-bg);
   padding: 1rem 2rem;
   z-index: 999;
 }
@@ -32,23 +42,18 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 0 1rem;
 }
 
 .logo {
-  color: var(--accent);
-  font-weight: bold;
-  font-size: 1.5rem;
-
   display: flex;
   align-items: center;
   padding: 0.2rem;
 }
 
 .logo img {
-  height: 70px;
-  filter: drop-shadow(0 0 10px var(--accent));
+  height: 60px;
+  filter: drop-shadow(0 0 10px var(--button-bg));
   transition: transform 0.3s ease;
   transform: scale(1.15);
 }
@@ -62,13 +67,13 @@ body {
 }
 
 .nav-links a:hover {
-  color: var(--accent);
+  color: var(--button-bg);
 }
 
 .hero {
   position: relative;
   height: 100vh;
-  background: linear-gradient(to right, #000428, #004e92);
+  background: linear-gradient(to right, var(--primary-gradient-end), var(--primary-gradient-start));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,13 +95,13 @@ body {
 }
 
 .glow {
-  color: var(--neon-blue);
-  text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+  color: var(--button-bg);
+  text-shadow: 0 0 10px var(--button-bg), 0 0 20px var(--button-bg);
   font-size: 3rem;
 }
 
 .cta-button {
-  background-color: var(--neon-purple);
+  background-color: var(--button-bg);
   color: white;
   padding: 1rem 2rem;
   border: none;
@@ -109,14 +114,14 @@ body {
 }
 
 .cta-button:hover {
-  background-color: var(--accent);
-  color: black;
-  box-shadow: 0 0 10px var(--accent);
+  background-color: white;
+  color: var(--button-bg);
+  box-shadow: 0 0 10px var(--button-bg);
 }
 
 .secondary {
   background-color: transparent;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--button-bg);
   margin-top: 0.5rem;
 }
 
@@ -125,7 +130,7 @@ body {
   justify-content: space-around;
   flex-wrap: wrap;
   padding: 40px 20px;
-  background: #111;
+  background: var(--cart-item-bg);
 }
 
 .benefit {
@@ -135,7 +140,7 @@ body {
 
 .benefit img {
   width: 50px;
-  filter: drop-shadow(0 0 5px var(--neon-blue));
+  filter: drop-shadow(0 0 5px var(--button-bg));
 }
 
 .stats {
@@ -147,7 +152,7 @@ body {
 
 .counter {
   font-size: 2rem;
-  color: var(--accent);
+  color: var(--button-bg);
 }
 
 .popular-games {
@@ -156,8 +161,8 @@ body {
 }
 
 .game-card {
-  background-color: #111;
-  border: 1px solid #333;
+  background-color: var(--cart-item-bg);
+  border: 1px solid #2a4d75;
   padding: 20px;
   border-radius: 10px;
   width: 300px;
@@ -171,7 +176,7 @@ body {
 
 .game-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px var(--accent);
+  box-shadow: 0 0 15px var(--button-bg);
 }
 
 .game-card img {
@@ -194,16 +199,13 @@ body {
 
 .icon {
   font-style: normal;
-  /* <- dezactivează italic-ul implicit */
   font-size: 2rem;
-  /* opțional, mărește emoji-ul */
   display: block;
   margin-bottom: 10px;
 }
 
-
 .game-card button {
-  background-color: var(--neon-blue);
+  background-color: var(--button-bg);
   border: none;
   padding: 0.5rem 1rem;
   color: #000;
@@ -214,10 +216,9 @@ body {
 }
 
 .game-card button:hover {
-  background-color: var(--accent);
-  color: #000;
+  background-color: white;
+  color: var(--button-bg);
 }
-
 
 .games-grid {
   display: flex;
@@ -226,22 +227,8 @@ body {
   gap: 30px;
 }
 
-.game-card {
-  background-color: #111;
-  border: 1px solid #333;
-  padding: 20px;
-  border-radius: 10px;
-  width: 300px;
-  transition: transform 0.3s ease;
-}
-
-.game-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px var(--accent);
-}
-
 button {
-  background-color: var(--neon-blue);
+  background-color: var(--button-bg);
   border: none;
   padding: 0.5rem 1rem;
   color: #000;
@@ -263,7 +250,7 @@ button {
 
 .how-it-works {
   padding: 60px 20px;
-  background-color: #0f0f0f;
+  background-color: var(--primary-bg);
   color: var(--text-light);
   text-align: center;
 }
@@ -276,8 +263,8 @@ button {
 
 .faq {
   padding: 60px 20px;
-  background-color: #111;
-  color: var(--text-light);
+  background-color: var(--cart-item-bg);
+  color: var(--text-dark);
   max-width: 800px;
   margin: 80px auto;
 }
@@ -288,8 +275,8 @@ button {
 }
 
 .faq details {
-  background-color: #1a1a1a;
-  border: 1px solid #333;
+  background-color: #e0ecf4;
+  border: 1px solid #ccc;
   border-radius: 8px;
   margin-bottom: 15px;
   padding: 15px;
@@ -307,7 +294,7 @@ button {
 }
 
 .newsletter {
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(to right, var(--primary-gradient-start), var(--primary-gradient-end));
   color: white;
   text-align: center;
   padding: 60px 20px;
@@ -339,7 +326,7 @@ button {
 }
 
 .newsletter-form button {
-  background-color: var(--neon-purple);
+  background-color: var(--button-bg);
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -350,14 +337,14 @@ button {
 }
 
 .newsletter-form button:hover {
-  background-color: var(--accent);
-  color: black;
-  box-shadow: 0 0 10px var(--accent);
+  background-color: white;
+  color: var(--button-bg);
+  box-shadow: 0 0 10px var(--button-bg);
 }
 
 .footer {
   padding: 30px;
-  background: linear-gradient(to right, #00ffff22, #8a2be222);
+  background-color: var(--footer-bg);
   text-align: center;
   font-size: 0.9rem;
 }
